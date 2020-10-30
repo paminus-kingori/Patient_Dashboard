@@ -1,0 +1,264 @@
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+
+}
+button{
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 6px 17px;
+}
+body{
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+.menu-links{
+    position: absolute;
+    top: 3%;
+    left: 1%;
+    z-index: 20;
+}
+.close-svg{
+display: none;
+width: 35px;
+
+}
+
+.displayIcon{
+    display: block;
+    animation: closer 1s 0s ease-out;
+
+}
+.hideIcon{
+    display: none;
+}
+
+@keyframes closer{
+    0%{
+transform: rotate(100deg);
+    }
+    100%{
+transform: rotate(0deg);
+    }
+}
+
+.links{
+    display: grid;
+    position: absolute;
+    z-index: 15;
+    grid-gap: 3rem;
+    height: 100vh;
+    width: 70%;
+    background: #2da6c1;
+    padding-left: 1.5rem;
+    align-content: center;
+    clip-path: circle(10px at 0% -10%);
+    -webkit-clip-path: circle(10px at 0% -10%);
+    transition:all 1s ease-out;
+    pointer-events: none;
+}
+.links a{
+    text-decoration: none;
+    color: #e5e6e8;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.bubble{
+    display: none;
+    position: absolute;
+    z-index: 8;
+    border-radius: 50%;
+    background-color: #0c36a8;
+    width: 300px;
+    top: 0;
+}
+
+.show{
+    
+    clip-path: circle(500px at 0% 19%);
+    -webkit-clip-path: circle(500px at 0% 19%);
+    pointer-events: all;
+}
+
+
+.menu-svg{
+    width: 35px;
+}
+.main-user-window{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-info{
+    width: 300px;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    grid-gap: 40px;
+    background: #62D1CB;
+}
+.user-icon{
+    border-radius: 50%;
+    width: 155px;
+}
+.personal-details{
+    width: max-content;
+    height: max-content;
+    line-height: 1.8;
+    padding: 10px 20px;
+    background: #e3e5e6;
+    border-radius: 4px;
+    color: #828181;
+}
+.options-sect{
+    flex-grow: 1;
+    text-align: center;
+}
+.section-header{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+.section-text{
+    padding: 10px 50px;
+    border-radius: 4px;
+    /* text-shadow: 1px 2px 4px #0000009e; */
+    font-size: 25px;
+    color: white;
+    width: max-content;
+    height: max-content;
+    background: #62D1CB;
+}
+.cards-sect{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 40px;
+    justify-items: center;
+    align-content: space-around;
+}
+.card{
+    align-content: center;
+    justify-items: center;
+display: grid;
+width: 250px;
+height: 250px;
+background: #ACFFF9;
+padding: 15px 7px;
+border-radius: 4px;
+}
+.medical-card{
+    height: 190px;
+}
+.card img{
+    width: auto;
+    object-fit: scale-down;
+}
+
+.card button{
+    background: #20cae0;
+    color: white;
+    text-shadow: 1px 0px 7px #00000063; 
+}
+.card button:hover{
+    background:#1ebbcf ;
+}
+.visits{
+    font-size: 5rem;
+    color: #888787;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 2px 3px 4px #0000009e;
+
+}
+.card-text{
+    color: #4F4E4E;
+    font-size: 18px;
+}
+.overlay{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 40%;
+}
+
+
+
+@media (max-width:1086px){
+    *{
+        font-size: 15px;
+    }
+    .links{
+        width: 100%;
+    }
+    .menu-links{
+        top: 1%;
+        left: 8%;
+    }
+    .overlay{
+    background: #24D9F1;
+    }
+    .personal-details{
+        box-shadow: 2px 2px 4px #00000081;
+    }
+    .menu-svg{
+        width: 30px;
+    }
+    .main-user-window{
+        flex-direction: column;
+        height: unset;
+    }
+    .user-info{
+        background: unset;
+        width: 100%;
+        padding: 4rem 0;
+                position: relative;
+    }
+    .options-sect{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 0;
+    }
+    .section-header{
+        position: absolute;
+        top: 3.5rem;
+    }
+    .section-text{
+        background: none;
+        font-size: 20px;
+        padding: 0;
+
+    }
+    .user-icon{
+        margin-top: 4rem;
+    }
+    .cards-sect{
+        grid-template-columns: auto auto;
+        grid-gap: 40px;
+    }
+    .card{
+        min-width: 170px;
+        width: auto;
+        height: auto;
+        max-width: 180px;
+    }
+    #mCard{
+        width: 100px;
+        height: 115px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .cards-sect{
+        grid-template-columns: auto;
+        grid-gap: 40px;
+    }
+}

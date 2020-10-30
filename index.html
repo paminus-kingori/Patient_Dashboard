@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+            <!-- bubble class is for the curved background on the links  -->
+            <div class="bubble"></div>
+            
+    <div class="menu-links">
+
+            <img src="images/menu.svg" alt="menu svg" class="menu-svg" id="menu-icon">
+            <img src="images/close-cross.svg" alt="menu svg" class="close-svg" id="close-icon">
+        
+    </div>
+    
+            <div class="links">
+                <a href="#">Chat with a doctor</a>
+                <a href="#">Book appointment</a>
+                <a href="#">My medication</a>
+                <a href="#">Medical history</a>
+            </div>
+            
+
+
+   
+    <div class="main-user-window">
+
+        <div class="user-info">
+            <div class="overlay"></div>
+
+            <img src="images/neutral avatar.svg" alt="user-icon" class="user-icon">
+
+            <div class="personal-details">
+                Name: <span class="username" id="username">John Doe</span> <br>
+                Age: <span class="age" id="age">12</span> yrs<br>
+                Gender: <span class="gender" id="gender">Male</span> <br>
+                Address: <span class="address" id="address">22 Lang'ata</span> <br>
+            </div>
+        </div>
+        <div class="options-sect">
+            <div class="section-header">
+                <div class="section-text">
+                Patient Dashboard
+                </div>
+            </div>
+            <div class="cards-sect">
+                <!-- chat with doc  -->
+                <div class="card">
+                    <img src="images/talking-to-doc.svg" alt="talking-to-doc">
+                    <button class="card-btn">Chat with a doctor</button>
+                    
+                </div>
+
+                <!-- appointment  -->
+                <div class="card">
+                    <img src="images/appointment.svg" alt="appointment">
+                    <button class="card-btn">Book Appointment</button>
+                    
+                </div>
+
+                <!-- medication -->
+                <div class="card">
+                    <img src="images/medicine 2.svg" alt="medication">
+                    <button class="card-btn">Current medication</button>
+                    
+                </div>
+
+               <!-- medical history -->
+                <div class="card">
+                    <img src="images/medical-history-board.svg" alt="medical history" class="medical-card" id="mCard">
+                    <button class="card-btn">Medical History</button>
+                    
+                </div>
+
+                <!-- health tips  -->
+                <div class="card">
+                    <img src="images/medicine.svg" alt="health tips">
+                    <button class="card-btn">Health tips</button>
+                    
+                </div>
+
+                <!-- number of visits  -->
+                <div class="card">
+                   <div class="visits"> 10 </div>
+                   <div class="card-text">
+                       Number of visits to the doctor
+                   </div>
+                    
+                </div>
+
+            </div>
+        </div>
+</div>
+
+</body>
+<script src="menu.js"></script>
+</html>
